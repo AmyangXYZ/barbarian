@@ -38,7 +38,7 @@ func main() {
 // DoRequest implements RunHandler.
 func DoRequest(path string) interface{} {
 	resp, err := http.Head("http://target.com" + path)
-	// Only pass valid positive result to the handler.
+	// Only pass valid result to the handler.
 	if err == nil && resp.StatusCode == 200 {
 		return path
 	}
